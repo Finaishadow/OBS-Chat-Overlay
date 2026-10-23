@@ -244,8 +244,6 @@ The order of the sub-actions matters:
 ```text
 Twitch Chat Message trigger
            ↓
-Twitch Add Target Info (%profileImageUrl%)
-           ↓
 Twitch Add Target Info (%UserName%)
            ↓
 Execute C# Code  (twitch-avatar.cs)
