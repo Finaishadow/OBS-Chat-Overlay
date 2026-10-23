@@ -2,7 +2,7 @@
 
 <p align="center">
   <strong>A customizable, animated chat overlay for OBS Studio.</strong><br>
-  Display Twitch, Kick, and YouTube messages together with Streamer.bot — using just HTML, CSS, and JavaScript.
+  Display Twitch, Kick, and YouTube messages together with Streamer.bot - using just HTML, CSS, and JavaScript.
 </p>
 
 <p align="center">
