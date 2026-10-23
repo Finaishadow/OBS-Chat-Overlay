@@ -111,7 +111,146 @@ The default settings work for a single PC with Streamer.bot using its default lo
 4. Check **Local file**.
 5. Click **Browse**, then select **`C:\OBS-Chat-Overlay\index.html`** (or wherever you placed your overlay).
 6. Use **Width: `800`** and **Height: `600`** as a starting point; adjust both to fit your stream layout. The chat is aligned to the *bottom-left of this Browser Source*, not necessarily the entire OBS scene.
-7. Leave **Custom CSS** blank; the supplied `style.css` already controls the design.
+7. Leave **Custom CSS** blank; the supplied `style.css` should also already control the design. otherwise:
+```js
+:root {
+  --chat-max-width: 500px;
+  --chat-font-family: "Comfortaa";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--chat-font-family);
+}
+
+.chat {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  max-width: var(--chat-max-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat__item {
+  background-color: rgba(0, 0, 0, 0.70);
+  margin-top: 15px;
+  padding: 4px 100px;
+  border-radius: 10px;
+  -webkit-text-stroke: 1px rgba(0, 0, 255, 0.1);
+
+  /* make avatar + animation relative to this block */
+  position: relative;
+
+  /* ✨ bounce in + slide out left */
+  animation: chatInOut 7s ease-in-out forwards;
+  transform-origin: left center;
+}
+
+.chat__message {
+  display: block;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.chat__item .chat__metadata::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--avatar-url) center/cover no-repeat;
+  left: 18px;
+  top: 32px;
+}
+
+/* Optional alt positioning:
+   top: 50%;
+   transform: translateY(-50%);
+*/
+
+.chat__avatar {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(0%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.chat__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chat__user {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  font-weight: 600;
+  color: var(--line-user-color, #ffffff);
+  font-size: 28px;
+}
+
+.status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ddd;
+}
+
+/* 🔸 snap bounce in, stay, then slide + fade out left */
+@keyframes chatInOut {
+  /* start off-screen, invisible */
+  0% {
+    opacity: 0;
+    transform: translateX(-140%) scale(0.9);
+  }
+
+  /* snap in quickly */
+  3% {
+    opacity: 1;
+    transform: translateX(-20px) scale(1.05);
+  }
+
+  /* little overshoot bounce */
+  8% {
+    transform: translateX(6px) scale(1.02);
+  }
+
+  /* settle in place */
+  12% {
+    transform: translateX(0) scale(1);
+  }
+
+  /* stay visible */
+  75% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  /* slide + fade out to the left */
+  100% {
+    opacity: 0;
+    transform: translateX(-140%) scale(0.95);
+  }
+}
+```
 8. Press **OK** and position/resize the Browser Source in the OBS canvas. Place it **above the game/video source** in the Sources list so it can be seen.
 
 The page itself is transparent, so only chat bubbles and temporary status labels are visible.
