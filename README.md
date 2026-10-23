@@ -103,7 +103,7 @@ const DEMO_MODE = false;     // Set to true to test without streaming
 The default settings work for a single PC with Streamer.bot using its default local WebSocket server. Change the host or port only if you also changed them in Streamer.bot.
 
 **Do not publish** your Streamer.bot password, tokens, or personal Social Stream Ninja session ID in a public commit. Use the shared defaults in the public copy; put personalized settings only in your local copy.
-## Part 4 — Put the overlay on OBS
+## Part 4 - Put the overlay on OBS
 ### Step 7: Add a Browser Source
 1. Open **OBS Studio** and select the scene where chat should appear.
 2. In the **Sources** dock, click **+ → Browser**.
@@ -256,7 +256,7 @@ body {
 The page itself is transparent, so only chat bubbles and temporary status labels are visible.
 
 ### Step 8: Test without going live
-**Option A: Demo mode — recommended for first-time setup**
+**Option A: Demo mode - recommended for first-time setup**
 1. Set `const DEMO_MODE = true;` in your *local* `overlay.js` and save.
 2. Right-click the Browser Source in OBS → **Properties** → **Refresh cache of current page** (or use its refresh option).
 3. Colored example messages should start appearing every few seconds.
