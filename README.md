@@ -111,7 +111,7 @@ The default settings work for a single PC with Streamer.bot using its default lo
 4. Check **Local file**.
 5. Click **Browse**, then select **`C:\OBS-Chat-Overlay\index.html`** (or wherever you placed your overlay).
 6. Use **Width: `800`** and **Height: `600`** as a starting point; adjust both to fit your stream layout. The chat is aligned to the *bottom-left of this Browser Source*, not necessarily the entire OBS scene.
-7. Leave **Custom CSS** blank; the supplied `style.css` should also already control the design. otherwise:
+7. This design onto the custom CSS on the browser properties on OBS make it cleaner and more customizable:
 ```js
 :root {
   --chat-max-width: 500px;
