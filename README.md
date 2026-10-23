@@ -1,18 +1,6 @@
 OBS + Streamer.bot — Custom Multiplatform Chat Overlay
 A friendly guide to setting up a custom on-stream chat box with OBS Studio, Streamer.bot, and a few HTML/CSS/JavaScript files.
 Display Twitch, Kick, and YouTube chat in one configurable overlay. Optionally add TikTok, Instagram, and other chat through Social Stream Ninja. This project is based on my own three-file overlay (`index.html`, `overlay.js`, and `style.css`). I am sharing how it works so you can create your own version!
-> **Start here:** The published tutorial is in [`docs/index.html`](docs/index.html). If GitHub Pages is enabled, use the site's URL in the repository's **Settings → Pages**.
-What it looks like
-Messages appear near the bottom-left of a transparent OBS Browser Source. Each message has a rounded dark background, a colored username, a message, and an avatar or platform icon. Messages disappear automatically after 8 seconds by default.
-Supported routes
-Chat source	How the overlay receives it	Status in the supplied code
-Twitch	Streamer.bot `Twitch.ChatMessage`	Enabled
-Kick	Streamer.bot `Kick.ChatMessage`	Enabled; Kick connection requires a supported Streamer.bot version
-YouTube	Streamer.bot `YouTube.Message`	Enabled; requires live-chat events to be received
-Custom messages	Streamer.bot `General.Custom`	Enabled; requires your own matching custom events
-TikTok / Instagram / YouTube via Social Stream Ninja	SSN channel 4 (`wss://io.socialstream.ninja/...`)	Optional and disabled until configured
-Not every platform needs to be connected. Use only the platforms that you stream on. If both Streamer.bot and SSN deliver the same chat, it may show up twice; use only one route for that platform.
----
 Requirements
 A Windows PC running OBS Studio and Streamer.bot. This walkthrough uses their Windows layouts; Streamer.bot support on macOS and Linux is experimental.
 A Twitch, Kick, and/or YouTube account, depending on where you stream.
