@@ -181,7 +181,7 @@ Keep the three files together. Do **not** select `docs/index.html` for your OBS 
 
 1. Open the desired scene in **OBS Studio**.
 2. Under **Sources**, select **`+` → Browser**.
-3. Give it a name, such as **Streamer.bot Chat Overlay**.
+3. Give it a name, such as **Chat Overlay**.
 4. Enable **Local file** and browse to `C:\OBS-Chat-Overlay\index.html` (or the location you chose).
 5. Set a starting **Width: `800`** and **Height: `600`**; you can resize it later.
 6. **Clear the Custom CSS box**. `index.html` already loads the single `style.css` file.
