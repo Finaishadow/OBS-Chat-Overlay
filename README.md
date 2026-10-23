@@ -1,7 +1,5 @@
-# OBS-Chat-Overlay
-A customizable OBS chat overlay powered by Streamer.bot, featuring Twitch, Kick, and YouTube chat support, user avatars, emotes, and real-time messages. Includes a friendly step-by-step installation guide, setup instructions, and customizable HTML, CSS, and JavaScript files.
 OBS + Streamer.bot — Custom Multiplatform Chat Overlay
-A beginner-friendly guide to setting up a custom on-stream chat box with OBS Studio, Streamer.bot, and a few HTML/CSS/JavaScript files.
+A friendly guide to setting up a custom on-stream chat box with OBS Studio, Streamer.bot, and a few HTML/CSS/JavaScript files.
 Display Twitch, Kick, and YouTube chat in one configurable overlay. Optionally add TikTok, Instagram, and other chat through Social Stream Ninja. This project is based on my own three-file overlay (`index.html`, `overlay.js`, and `style.css`). I am sharing how it works so you can create your own version!
 > **Start here:** The published tutorial is in [`docs/index.html`](docs/index.html). If GitHub Pages is enabled, use the site's URL in the repository's **Settings → Pages**.
 What it looks like
