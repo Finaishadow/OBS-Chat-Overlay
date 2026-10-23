@@ -89,7 +89,7 @@ C:\OBS-Chat-Overlay\
 └── style.css
 ```
 
-Keep the three files together. You should use the **`overlay`** folder for OBS — **not** `docs/index.html` (which is the public guide website).
+Keep the three files together. You should use the **`overlay`** folder for OBS — **not** `docs/index.html` (which is the guide website).
 
 ### Step 6: Edit settings (optional)
 Open `overlay.js` with Notepad or an editor such as VS Code. At the top:
