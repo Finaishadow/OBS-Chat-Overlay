@@ -43,7 +43,7 @@
 | **Your own events** | Streamer.bot `General.Custom` | Optional advanced integrations |
 
 > [!IMPORTANT]
-> **The GitHub Pages website is the tutorial — not the live overlay.** In OBS, load your **local `overlay/index.html`** file. The tutorial lives at `docs/index.html`.
+> **The GitHub Pages website is the tutorial — not the live overlay.** In OBS, load your **local `overlay/index.html`** file. The tutorial also lives at `docs/index.html`.
 
 ---
 
