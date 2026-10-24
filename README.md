@@ -163,7 +163,7 @@ const WEBSOCKET_OPTIONS = {
 ```
 
 > [!CAUTION]
-> Leave the WebSocket server bound to **`127.0.0.1`** for local use. Don't expose the port to the internet or commit passwords/API credentials to a public GitHub repository. **OBS WebSocket (commonly port 4455)** is a different service and is not needed for this setup.
+> Leave the WebSocket server bound to **`127.0.0.1`** for local use. Don't expose the port to the internet (such as port forwarding) or commit passwords/API credentials to a public GitHub repository. **OBS WebSocket (commonly port 4455)** is a different service and is not needed for this setup.
 
 ### 05 — Put the overlay on your PC
 
