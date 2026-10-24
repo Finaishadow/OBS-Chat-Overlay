@@ -1,5 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33898490/README.md)
-
 <h1 align="center">💬 OBS + Streamer.bot Chat Overlay</h1>
 
 <p align="center">
