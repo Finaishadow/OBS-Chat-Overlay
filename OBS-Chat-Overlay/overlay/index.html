@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Streamer.bot Chat Overlay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="chat" class="chat"></div>
+    <div id="status" class="status status--disconnected">
+      Connecting to Streamer.bot…
+    </div>
+
+    <!-- Load the Streamer.bot WebSocket client -->
+    <script src="https://cdn.jsdelivr.net/npm/@streamerbot/client/dist/streamerbot-client.js"></script>
+
+    <!-- Load your overlay logic AFTER the DOM and client library -->
+    <script src="overlay.js"></script>
+  </body>
+</html>
